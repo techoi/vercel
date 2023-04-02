@@ -29,14 +29,14 @@ importers:
       source-map-support: 0.5.12
       ts-eager: 2.0.2
       ts-jest: 28.0.5
-      turbo: 1.7.0
+      turbo: 1.8.9-canary.0
     dependencies:
       lerna: 5.6.2
     devDependencies:
       '@types/node': 14.18.33
       '@typescript-eslint/eslint-plugin': 5.21.0_5yvnzvdwzksrnum37j3gumwy4y
       '@typescript-eslint/parser': 5.21.0_eslint@8.14.0
-      '@vercel/build-utils': link:packages/build-utils
+      '@vercel/build-utils': 6.7.0
       '@vercel/ncc': 0.24.0
       async-retry: 1.2.3
       buffer-replace: 1.0.0
@@ -57,7 +57,7 @@ importers:
       source-map-support: 0.5.12
       ts-eager: 2.0.2
       ts-jest: 28.0.5_jest@28.0.2
-      turbo: 1.7.0
+      turbo: 1.8.9-canary.0
 
   api:
     specifiers:
@@ -81,7 +81,7 @@ importers:
     devDependencies:
       '@types/node': 16.18.11
       '@types/node-fetch': 2.5.4
-      '@vercel/node': link:../packages/node
+      '@vercel/node': 2.10.2
       typescript: 4.3.4
 
   packages/build-utils:
@@ -2622,7 +2622,6 @@ packages:
 
   /@edge-runtime/format/1.1.0:
     resolution: {integrity: sha512-MkLDDtPhXZIMx83NykdFmOpF7gVWIdd6GBHYb8V/E+PKWvD2pK/qWx9B30oN1iDJ2XBm0SGDjz02S8nDHI9lMQ==}
-    dev: false
 
   /@edge-runtime/jest-environment/2.0.0:
     resolution: {integrity: sha512-Bic/DlNqVFIoHzO1rvSR+XE+xHoHRFD3oLoQ3w5VfjpyWEzCtPeY9bWJ0KuhdVAhbmcsS+62Ym8eoJXsJEb3hw==}
@@ -6771,6 +6770,10 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
+  /@vercel/build-utils/6.7.0:
+    resolution: {integrity: sha512-1cHgu0AzETSMLo1ugeHOT2pcrXNoZb1bwgxBP7yTIlJAKWLIEqPHbJWFvKQXZl2FV3kzzTctTrw/YNUWmntYiA==}
+    dev: true
+
   /@vercel/fun/1.0.4:
     resolution: {integrity: sha512-zLY2d1U9JJm3CorfEcuZ7307fo77/Z/mU12LDJpSGtdpjzxgpxMlU5NPq8whz8hIZhIMkBJv0DqZ5bgenktQnw==}
     engines: {node: '>= 10'}
@@ -6824,6 +6827,38 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+
+  /@vercel/node-bridge/4.0.0:
+    resolution: {integrity: sha512-617HSGelTGR68s0kqsPV0R2UiSvcw3Zf5Yv32S5NN4AH5TZGRr5DQJ3ATr4C/HrK7CHK5B7FDVrv2JebdVpPYQ==}
+    dev: true
+
+  /@vercel/node/2.10.2:
+    resolution: {integrity: sha512-rsxVEosHUtSBswZfZWxWgV4v5x8COB9kTp4lhaxZXC9cHFgXT5ydV7m4R2NOPwcRGUbQSyy9ushX1RnsOan0qw==}
+    dependencies:
+      '@edge-runtime/vm': 2.0.0
+      '@types/node': 14.18.33
+      '@vercel/build-utils': 6.7.0
+      '@vercel/node-bridge': 4.0.0
+      '@vercel/static-config': 2.0.14
+      edge-runtime: 2.0.0
+      esbuild: 0.14.47
+      exit-hook: 2.2.1
+      node-fetch: 2.6.7
+      ts-node: 10.9.1_jh3j7gf3qptnaxtpzk3sx5vjku
+      typescript: 4.3.4
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - encoding
+    dev: true
+
+  /@vercel/static-config/2.0.14:
+    resolution: {integrity: sha512-Ih0H/V8geRjsNpvD73dphV+y0Pe21RXIJEUW/XI0y7ZrYzLbYQt4AAIvsgfDqcQNm4xEizh3sEXArPWEp18bdQ==}
+    dependencies:
+      ajv: 8.6.3
+      json-schema-to-ts: 1.6.4
+      ts-morph: 12.0.0
+    dev: true
 
   /@vercel/webpack-asset-relocator-loader/1.7.3:
     resolution: {integrity: sha512-vizrI18v8Lcb1PmNNUBz7yxPxxXoOeuaVEjTG9MjvDrphjiSxFZrRJ5tIghk+qdLFRCXI5HBCshgobftbmrC5g==}
@@ -7196,7 +7231,6 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
-    dev: false
 
   /alpha-sort/2.0.1:
     resolution: {integrity: sha512-+ywJRo+J0Z5qFGoODbzp/hxUZhumuFjS8hPRv5vaPPMwEbW35xPhICNr3DhPJkgiRCW94iG33hOOCO/SV5F60g==}
@@ -10218,7 +10252,6 @@ packages:
       pretty-bytes: 5.6.0
       pretty-ms: 7.0.1
       time-span: 4.0.0
-    dev: false
 
   /ee-first/1.1.1:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
@@ -11561,7 +11594,6 @@ packages:
   /exit-hook/2.2.1:
     resolution: {integrity: sha512-eNTPlAD67BmP31LDINZ3U7HSF8l57TxOY2PmBJ1shpCvpnxBF93mWCE8YHBnXs8qiUZJc9WDcWIeC3a2HIAMfw==}
     engines: {node: '>=6'}
-    dev: false
 
   /exit/0.1.2:
     resolution: {integrity: sha512-Zk/eNKV2zbjpKzrsQ+n1G6poVbErQxJ0LBOJXaKZ1EViLzH+hrLu9cdXI4zw9dBQJslwBEpbQ2P1oS7nDxs6jQ==}
@@ -13529,7 +13561,6 @@ packages:
   /http-status/1.5.3:
     resolution: {integrity: sha512-jCClqdnnwigYslmtfb28vPplOgoiZ0siP2Z8C5Ua+3UKbx410v+c+jT+jh1bbI4TvcEySuX0vd/CfFZFbDkJeQ==}
     engines: {node: '>= 0.4.0'}
-    dev: false
 
   /http2-wrapper/1.0.3:
     resolution: {integrity: sha512-V+23sDMr12Wnz7iTcDeJr3O6AIxlnvT/bmaAAAP/Xda35C90p9599p0F1eHR/N1KILWSoWVAiOMFjBBXaXSMxg==}
@@ -15481,7 +15512,6 @@ packages:
     dependencies:
       '@types/json-schema': 7.0.11
       ts-toolbelt: 6.15.5
-    dev: false
 
   /json-schema-traverse/0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
@@ -16672,7 +16702,6 @@ packages:
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
-    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
@@ -18356,7 +18385,6 @@ packages:
   /pretty-bytes/5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
-    dev: false
 
   /pretty-error/2.1.2:
     resolution: {integrity: sha512-EY5oDzmsX5wvuynAByrmY0P0hcp+QpnAKbJng2A2MPjVKXCxrDSUkzghVJ4ZGPIv+JC4gX8fPUWscC0RtjsWGw==}
@@ -18405,7 +18433,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       parse-ms: 2.1.0
-    dev: false
 
   /proc-log/2.0.1:
     resolution: {integrity: sha512-Kcmo2FhfDTXdcbfDH76N7uBYHINxc/8GW7UAVuVP9I+Va3uHSerrnKV6dLooga/gh7GlgzuCCr/eoldnL1muGw==}
@@ -20555,7 +20582,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       convert-hrtime: 3.0.0
-    dev: false
 
   /time-zone/1.0.0:
     resolution: {integrity: sha512-TIsDdtKo6+XrPtiTm1ssmMngN1sAhyKnTO2kunQWqNPWIVvCm15Wmw4SWInwTVgJ5u/Tr04+8Ei9TNcw4x4ONA==}
@@ -20884,7 +20910,6 @@ packages:
       typescript: 4.3.4
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
-    dev: false
 
   /ts-node/8.9.1_typescript@4.7.4:
     resolution: {integrity: sha512-yrq6ODsxEFTLz0R3BX2myf0WBCSQh9A+py8PBo1dCzWIOcvisbyH6akNKqDHMgXePF2kir5mm5JXJTH3OUJYOQ==}
@@ -20903,7 +20928,6 @@ packages:
 
   /ts-toolbelt/6.15.5:
     resolution: {integrity: sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==}
-    dev: false
 
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
@@ -20990,65 +21014,65 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
-  /turbo-darwin-64/1.7.0:
-    resolution: {integrity: sha512-hSGAueSf5Ko8J67mpqjpt9FsP6ePn1nMcl7IVPoJq5dHsgX3anCP/BPlexJ502bNK+87DDyhQhJ/LPSJXKrSYQ==}
+  /turbo-darwin-64/1.8.9-canary.0:
+    resolution: {integrity: sha512-qwuONCOzqqillQRlgZjHP7nmet64R0tViMkZOuRVErKVgSJ6HLzoBt4EDHykk3wqNBoYTjdyt8Pkydg/rszNSw==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64/1.7.0:
-    resolution: {integrity: sha512-BLLOW5W6VZxk5+0ZOj5AO1qjM0P5isIgjbEuyAl8lHZ4s9antUbY4CtFrspT32XxPTYoDl4UjviPMcSsbcl3WQ==}
+  /turbo-darwin-arm64/1.8.9-canary.0:
+    resolution: {integrity: sha512-LXFPr0cN/xxT++oP+CTThKnSpkpM8SU0Vdmb9+9ARDLNGC18WlNa8t4Mg1xIVxQ/nSUsNOyBuKCj2lUG+Vo5PA==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64/1.7.0:
-    resolution: {integrity: sha512-aw2qxmfZa+kT87SB3GNUoFimqEPzTlzlRqhPgHuAAT6Uf0JHnmebPt4K+ZPtDNl5yfVmtB05bhHPqw+5QV97Yg==}
+  /turbo-linux-64/1.8.9-canary.0:
+    resolution: {integrity: sha512-Hogxjy9IKWR2zfNlquZNRNr9qsURNhpKUx6V/wbBleySSugCXnI5qlpHlVSS82RTYMKl17E0Hp+squBRSBO0TA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64/1.7.0:
-    resolution: {integrity: sha512-AJEx2jX+zO5fQtJpO3r6uhTabj4oSA5ZhB7zTs/rwu/XqoydsvStA4X8NDW4poTbOjF7DcSHizqwi04tSMzpJw==}
+  /turbo-linux-arm64/1.8.9-canary.0:
+    resolution: {integrity: sha512-TErtsncdn3WQZ40AGZntVHnCmgQhQm9yEhd2m++jC8HilF1eZ3VK5RTNSnrUHcK+Dzpzpa7tU06eY4DrkKQO8Q==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64/1.7.0:
-    resolution: {integrity: sha512-ewj7PPv2uxqv0r31hgnBa3E5qwUu7eyVRP5M1gB/TJXfSHduU79gbxpKCyxIZv2fL/N2/3U7EPOQPSZxBAoljA==}
+  /turbo-windows-64/1.8.9-canary.0:
+    resolution: {integrity: sha512-82ozFByohCQDwDwuzooZpWIdqzF4d21d0e8iywVZA0OaPlt/gVIAuLHtDAs+9BgftC5PHaVzBLb/YZsP8M75Ng==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64/1.7.0:
-    resolution: {integrity: sha512-LzjOUzveWkvTD0jP8DBMYiAnYemmydsvqxdSmsUapHHJkl6wKZIOQNSO7pxsy+9XM/1/+0f9Y9F9ZNl5lePTEA==}
+  /turbo-windows-arm64/1.8.9-canary.0:
+    resolution: {integrity: sha512-iNypru4UkpTXeZE6Q6ObD3/muGeLFg/GNuMN8d5KyBhg9Xn56/FAirlT2CwoqR6tADVEKdmzLr2VFSrv+DAClQ==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo/1.7.0:
-    resolution: {integrity: sha512-cwympNwQNnQZ/TffBd8yT0i0O10Cf/hlxccCYgUcwhcGEb9rDjE5thDbHoHw1hlJQUF/5ua7ERJe7Zr0lNE/ww==}
+  /turbo/1.8.9-canary.0:
+    resolution: {integrity: sha512-XUORu9cKwN1UECsxK/vDJzk2qKk0afvmM55r53TUdaH4JzPMM5LLIOWB2jeMRZXsQLNH712ewNWNOuKcv3B7Bg==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.7.0
-      turbo-darwin-arm64: 1.7.0
-      turbo-linux-64: 1.7.0
-      turbo-linux-arm64: 1.7.0
-      turbo-windows-64: 1.7.0
-      turbo-windows-arm64: 1.7.0
+      turbo-darwin-64: 1.8.9-canary.0
+      turbo-darwin-arm64: 1.8.9-canary.0
+      turbo-linux-64: 1.8.9-canary.0
+      turbo-linux-arm64: 1.8.9-canary.0
+      turbo-windows-64: 1.8.9-canary.0
+      turbo-windows-arm64: 1.8.9-canary.0
     dev: true
 
   /tweetnacl/0.14.5:
